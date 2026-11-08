@@ -11,10 +11,13 @@
 
     <!-- Uso de HTML semántico: header para el encabezado principal -->
     <header>
+        <nav class="navbar">
+        <img src="./recursos/Logo.svg" alt="Logo de la aplicación" class="logo">
         <h1>Generador de Paletas</h1>
+        </nav>
     </header>
 
-    <!-- Etiqueta main para englobar el contenido central de la aplicación -->
+    <!-- contenido central de la aplicación -->
     <main>
         
         <!-- Sección de controles: Selector y Botón -->
@@ -27,13 +30,13 @@
                 <option value="9">9 colores</option>
             </select>
 
-            <!-- Botón operativo requerido -->
+            <!-- Botón -->
             <button id="generate-btn">Generar paleta</button>
         </section>
 
         <!-- Contenedor vacío donde JavaScript inyectará el render dinámico -->
         <section id="palette-container" class="palette-grid">
-            <!-- Las tarjetas de colores (divs) aparecerán aquí -->
+            <!-- Los colores apareceran aqui -->
         </section>
 
     </main>
@@ -41,7 +44,7 @@
     <!-- Contenedor oculto para el microfeedback (toast) -->
     <div id="toast-container" class="toast hidden" aria-hidden="true"></div>
 
-    <!-- Enlace a tu lógica de JavaScript -->
+    <!-- Enlace a JavaScript -->
     <script src="app.js"></script>
 </body>
 </html>
