@@ -7,7 +7,7 @@ const toastContainer = document.getElementById('toast-container');
 
 // función para generar un color hexadecimal aleatorio
 
-function generateColorHEX() {
+function generarColorHEX() {
     const colorAleatorio = Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
     return `#${colorAleatorio}`;
 }
@@ -25,7 +25,7 @@ function generarPaleta() {
     // limpiar la paleta existente
     paletteContainer.innerHTML = '';
     // obtener el tamaño de la paleta seleccionado
-    const paletteSize = parseInt(paletteSizeSelect.value, 10);
+    const  size = parseInt(paletteSizeSelect.value, 10);
     // generar las tarjetas de colores mediante un bucle
     for (let i = 0; i < size; i++) {
         const colorHex = generarColorHEX();
@@ -63,4 +63,7 @@ function generarPaleta() {
 
 // activar el boton de generar paleta al hacer clic
 generateBtn.addEventListener('click', generarPaleta);
+
+//generar una paleta atumatica al cargar la pagina
+window.addEventListener('load', generarPaleta);
 
