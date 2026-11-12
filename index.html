@@ -1,46 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Generador de Paletas</title>
-    <!-- Aquí enlazaremos tu archivo CSS en el próximo paso -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-        <img src="./recursos/Logo.svg" alt="Logo de la aplicación" class="logo">
+      <nav class="navbar">
+        <img
+          src="./recursos/Logo.svg"
+          alt="Logo de la aplicación"
+          class="logo"
+        />
         <h1>Generador de Paletas</h1>
-        </nav>
+      </nav>
     </header>
 
     <main>
-        
-        <section class="controls">
-            <!-- Consideración de accesibilidad: label asociado al select mediante el atributo 'for' e 'id' -->
-            <label for="palette-size">Seleccionar tamaño:</label>
-            <select id="palette-size" name="palette-size">
-                <option value="6">6 colores</option>
-                <option value="8">8 colores</option>
-                <option value="9">9 colores</option>
-            </select>
+      <section class="controls">
+        <label for="palette-size">Seleccionar tamaño:</label>
+        <select id="palette-size" name="palette-size">
+          <option value="6">6 colores</option>
+          <option value="8">8 colores</option>
+          <option value="9">9 colores</option>
+        </select>
 
-            <button id="generate-btn">Generar paleta</button>
-        </section>
+        <button id="generate-btn">Generar paleta</button>
+      </section>
 
-        <!-- Contenedor vacío donde JavaScript inyectará el render dinámico -->
-        <section id="palette-container" class="palette-grid">
-            <!-- Los colores apareceran aqui -->
-        </section>
-
+      <section id="palette-container" class="palette-grid"></section>
     </main>
 
-    <!-- Contenedor oculto para el microfeedback (toast) -->
     <div id="toast-container" class="toast hidden" aria-hidden="true"></div>
 
-    <!-- Enlace a JavaScript -->
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
