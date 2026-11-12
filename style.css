@@ -54,6 +54,8 @@ select,
 button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
+  color: white;
+  background-color: #5f5bcd;
   border: 1px solid #ccc;
   border-radius: 4px;
   cursor: pointer;
