@@ -61,6 +61,26 @@ function generarPaleta() {
     }
 }
 
+function showToast(mensaje) {
+    toastContainer.textContent = mensaje;
+    toastContainer.classList.remove('hidden');
+    
+    // Ocultar el toast después de 2.5 segundos
+    setTimeout(() => {
+        toastContainer.classList.add('hidden');
+    }, 2500);
+}
+
+function copiarColor(color) {
+    navigator.clipboard.writeText(color)
+        .then(() => {
+            showToast(`¡Copiado: ${color}!`);
+        })
+        .catch(err => {
+            console.error('Error al copiar el color:', err);
+        });
+}
+
 // activar el boton de generar paleta al hacer clic
 generateBtn.addEventListener('click', generarPaleta);
 
