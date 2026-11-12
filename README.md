@@ -23,7 +23,7 @@ Este proyecto fue construido utilizando tecnologías web estándar (Vanilla), si
 
 HTML5: Estructura semántica de la aplicación.
 
-CSS3: Estilos, diseño basado en Grid/Flexbox y animaciones (transiciones y notificaciones tipo toast).
+CSS3: Estilos, diseño basado en Grid/Flexbox (transiciones y notificaciones tipo toast).
 
 JavaScript (ES6): Lógica para la generación de colores matemáticos, manipulación del DOM y uso de la API del Portapapeles (navigator.clipboard).
 
